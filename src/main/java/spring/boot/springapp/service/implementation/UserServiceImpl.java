@@ -13,14 +13,14 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public void create(User user) {
+    public User save(User user) {
         user.setUserId(userRepository.count() + 1);
-        userRepository.save(user);
+        return userRepository.save(user);
     }
 
     @Override
-    public void update(User user) {
-        userRepository.save(user);
+    public User update(User user) {
+        return userRepository.save(user);
     }
 
     @Override
