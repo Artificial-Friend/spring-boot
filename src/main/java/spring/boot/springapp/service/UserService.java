@@ -11,4 +11,6 @@ public interface UserService {
     Optional<User> get(Long id);
 
     void remove(Long id);
+
+    Optional<User> getUserByPhoneNumber(int number);
 }

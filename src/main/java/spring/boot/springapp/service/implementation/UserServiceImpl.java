@@ -32,4 +32,9 @@ public class UserServiceImpl implements UserService {
     public void remove(Long id) {
         userRepository.deleteById(id);
     }
+
+    @Override
+    public Optional<User> getUserByPhoneNumber(int number) {
+        return userRepository.getUserByPhoneNumber(number);
+    }
 }
